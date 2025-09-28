@@ -1,0 +1,2 @@
+# normalize text files and force LF in the repo/worktree
+* text=auto eol=lf
