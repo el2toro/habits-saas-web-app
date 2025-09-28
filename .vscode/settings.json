@@ -1,4 +1,21 @@
- {
-    "thunder-client.saveToWorkspace": true,
-    "thunder-client.workspaceRelativePath": ".thunder-client"
- }
+{
+   "thunder-client.saveToWorkspace": true,
+   "thunder-client.workspaceRelativePath": ".thunder-client",
+
+   // Make Git view refresh more reliably in the devcontainer
+   "git.autorefresh": true,
+   "git.refreshOnWindowFocus": true,
+
+   // Some file systems (mounted volumes, containers) can miss native fs events.
+   // Enable polling to make the file watcher detect external changes more reliably.
+   // Polling has a small CPU cost but is often necessary in containers/VMs.
+   "files.usePolling": true,
+   "files.pollingInterval": 1000,
+
+   // Ensure .git internals aren't excluded from watching (so Git status updates promptly).
+   "files.watcherExclude": {
+      "**/node_modules/**": true,
+      "**/.git/objects/**": false,
+      "**/.git/refs/**": false
+   }
+}
