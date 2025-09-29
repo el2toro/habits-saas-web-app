@@ -10,3 +10,8 @@
 /GoodHabits.HabitService/obj
 /.vs/GoodHabits
 /.vs/ProjectEvaluation
+
+# Ignore build output directories
+# Ignore any bin/ and obj/ folders in the repository
+**/bin/
+**/obj/

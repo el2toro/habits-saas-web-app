@@ -18,4 +18,9 @@
       "**/.git/objects/**": false,
       "**/.git/refs/**": false
    }
+   ,
+   "files.exclude": {
+      "**/bin": true,
+      "**/obj": true
+   }
 }
