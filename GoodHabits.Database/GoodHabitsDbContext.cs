@@ -15,6 +15,10 @@ public class GoodHabitsDbContext : DbContext
         get => _tenantService.GetTenant()?.TenantName ?? String.Empty;
     }
     public DbSet<Habit>? Habits { get; set; }
+    public DbSet<User>? Users { get; set; }
+    public DbSet<Progress>? Progress { get; set; }
+    public DbSet<Reminder>? Reminders { get; set; }
+    public DbSet<Goal>? Goals { get; set; }
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         // Get the connection string from the tenant service. During startup (migrations)
